@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/*font*/
+.font.small {
+    font-size:0.5em;
+}
+
+.font.middle {
+    font-size:0.8em;
+}
+
+.font.large {
+    font-size:1.1em;
+}
+
+.font.header1 {
+    font-size:2em;
+    font-weight:bold;
+}
+
+.font.header2 {
+    font-size:1.7em;
+    font-weight:bold;
+}
+
+.font.header3 {
+    font-size:1.5em;
+    font-weight:bold;
+}
+
+.font.header4 {
+    font-size:1.2em;
+    font-weight:bold;
+}
+
+.font.header5 {
+    font-size:1.0em;
+    font-weight:bold;
+}
+
+.font.header6 {
+    font-size:0.8em;
+    font-weight:bold;
+}
+
+.font.header7 {
+    font-size:0.6em;
+    font-weight:bold;
+}
+
+.font.outline {
+ filter:dropshadow(color=#00aced ,offX= 0,offY=-1)
+    dropshadow(color=#00aced ,offX= 1,offY= 0)
+    dropshadow(color=#00aced ,offX= 0,offY= 1)
+    dropshadow(color=#00aced ,offX=-1,offY= 0);
+    
+    /*中の文字列の色*/
+    -webkit-text-stroke-color: #ffffff;
+    color:#ffffff;
+    
+    text-shadow: #00aced  1px 1px 0px, #00aced  -1px 1px 0px,
+                 #00aced  1px -1px 0px, #00aced  -1px -1px 0px;
+      
+}
+
+.font.outline.inactive {
+ filter:dropshadow(color=#01A9DB  ,offX= 0,offY=-1)
+    dropshadow(color=#01A9DB  ,offX= 1,offY= 0)
+    dropshadow(color=#01A9DB  ,offX= 0,offY= 1)
+    dropshadow(color=#01A9DB  ,offX=-1,offY= 0);
+    
+    /*中の文字列の色*/
+    -webkit-text-stroke-color: whitesmoke;
+    color:whitesmoke;
+    
+    text-shadow: #01A9DB   1px 1px 0px, #01A9DB   -1px 1px 0px,
+                 #01A9DB   1px -1px 0px, #01A9DB   -1px -1px 0px;
+      
+}

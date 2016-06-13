@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+span.red-badge {
+    background-color:red;
+    border:solid 0.1em #ff0000;
+    padding:1%;
+    margin-left:1%;
+    margin-right:1%;
+    border-radius:3px;
+    border:none;
+    color:#ffffff;
+    text-align:center;
+   
+    z-index:10;
+}
+
+span.orange-badge {
+    background-color:#EDBE4F;
+    padding:1%;
+    margin-left:1%;
+    margin-right:1%;
+    border-radius:3px;
+    border:none;
+    color:#ffffff;
+    text-align:center;
+   
+    z-index:10;
+}
+
+div.amount-badge {
+    position:absolute;
+    top:16%;
+    left:56%;
+    border-radius:100%;
+    color:white;
+    background-color:red;
+    text-align:center;
+    vertical-align:middle;
+    width:20px;
+    height:20px;
+    font-size: 0.8em;
+    z-index:10;
+}
+
+span.tag-badge {
+    padding:2% 5%;
+    border-radius:5px;
+    background-color:#00aced;
+    background-repeat:no-repeat;
+    background-size:auto 80%;
+    background-position:5% 50%;
+    color:white;
+    z-index:10;
+}
+
+span.like-badge {
+    padding:2% 10% 2% 25%;
+    border-radius:5px;
+    border:solid 1px lightgray;
+    background-image:url(../img/favorite_icon.png);
+    background-repeat:no-repeat;
+    background-size:auto 80%;
+    background-position:5% 50%;
+    color:lightgray;
+    z-index:10;
+}
+
+span.comment-badge {
+    padding:2% 10% 2% 25%;
+    border-radius:5px;
+    border:solid 1px lightgray;
+    background-image:url(../img/comments_icon_gray.png);
+    background-repeat:no-repeat;
+    background-size:auto 80%;
+    background-position:5% 50%;
+    color:lightgray;
+    z-index:10;
+}
+
+span.ranking-gold-badge {
+    border-radius:100%;
+    color:white;
+    background-color:#c1ab05;
+    text-align:center;
+    padding:5px 7px;
+    font-size: 0.8em;
+    z-index:10;
+}
+
+span.ranking-silver-badge {
+    border-radius:100%;
+    color:white;
+    background-color:#c0c0c0;
+    text-align:center;
+    padding:5px 7px;
+    font-size: 0.8em;
+    z-index:10;
+}
+
+span.ranking-bronze-badge {
+    border-radius:100%;
+    color:white;
+    background-color:#ac6b25;
+    text-align:center;
+    padding:5px 7px;
+    font-size: 0.8em;
+    z-index:10;
+}
+
+span.ranking-normal-badge {
+    border-radius:100%;
+    color:white;
+    background-color:#7d7d7d;
+    text-align:center;
+    padding:5px 7px;
+    font-size: 0.8em;
+}
+
+div.stay-badge {
+    color:white;
+    font-size:0.5em;
+    text-align:center;
+    border-radius:100%;
+    width:7%;
+    background-color:blue;
+    padding:2% 1%;
+}
+
+div.tour-badge {
+    color:white;
+    font-size:0.3em;
+    text-align:center;
+    border-radius:100%;
+    width:7%;
+    background-color:#EDBE4F;
+    padding:2% 1%;
+}

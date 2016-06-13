@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>U-CREATES. -Webサイト、スマートフォンアプリ開発-</title>
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">        
+        <link rel="stylesheet" media="all" type="text/css" href="./css/font.css">
+        <link rel="stylesheet" media="all" type="text/css" href="./css/image.css">
+        <link rel="stylesheet" media="all" type="text/css" href="./css/icon.css">
+        <link rel="stylesheet" media="all" type="text/css" href="./css/badge.css">
+        <link rel="stylesheet" media="all" type="text/css" href="./css/fixed-layout.css">
+        <link rel="stylesheet" media="all" type="text/css" href="./css/contents.css">
+        <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+        <script src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
+        <script src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>        
+        <script type="text/javascript" src="./js/facebook.js"></script>
+        <script type="text/javascript" src="./js/bouncy.js"></script>
+        <script type="text/javascript">
+        <!--
+            window.fbAsyncInit = function() {
+                var callback = function(response) {
+                    var noticeList = document.getElementById('notice-list');
+                    var data = response.data;
+                    var infoCount = 0;
+                    for (var i in data) {
+                        if (infoCount > 5) {
+                            break;
+                        }
+                        var info = data[i];
+                        if (undefined === info || undefined === info.message) {
+                            continue;
+                        }
+                        info.created_time = info.created_time.replace("+0000","");
+                        var newDate = new Date(info.created_time);
+                        var year = newDate.getFullYear();
+                        var month = newDate.getMonth() + 1;
+                        if (null !== String(month).match(/^[1-9]?$/)) {
+                            month = "0" + month;
+                        }
+
+                        var date = newDate.getDate();
+                        if (null !== String(date).match(/^[1-9]?$/)) {
+                            date = "0" + date;
+                        }
+                        
+                        var time = year + "." + month + "." + date;
+                        var template = "<li><span class='notice-statement font middle'>"
+                                +info.message
+                                +"</span>"
+                                +"<span class='notice-date font header6'>"
+                                +time
+                                +"</span>"
+                                +"</li>";
+                        noticeList.innerHTML += template;
+                        infoCount++;
+                    }                            
+                };
+            
+                var client = new FacebookClient();
+                client.request("/1718669885030615/feed",callback);
+            };
+
+            (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+            
+            $(function() {
+                $("#bgimage").hide();
+                $("#bgimage").fadeIn(1500);
+                
+                onMenuListHover("#works");
+                onMenuListHover("#profile");
+                onMenuListHover("#contact-area");
+            
+                function onMenuListHover(id) {
+                    $(id).hover(
+                        function(){ 
+                            $(this).fadeOut(10);
+                            $(this).css('background-color', '#eeeeee');
+                            $(this).fadeIn(500);
+                        },
+                        function(){
+                            $(this).css('background-color', '#ffffff');
+                        }
+                    );            
+                    
+                }
+            });            
+        // -->
+        </script>        
+    </head>
+    <body>
+        <header id="index-header" class="contact-area">
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 inline-right font header6">
+                        Webサイト制作/スマートフォンアプリ開発はU-CREATES.
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </header>
+        <article id="index-article">
+            <div class="table width100 padding-top-large padding-bottom-large margin-top-middle" style="background-color:whitesmoke;">
+                <div class="row">
+                    <div class="cell width100 inline-center relative">
+                        <img src="./img/top_bg.png" width="50%">
+                        <img id="logo" src="./img/logo.png" width="100px" style="position:absolute;top:0px;left:0px;display:none;z-index:1;">
+                        <img id="web-icon" src="./img/top_icon_01.png" style="position:absolute;top:0px;left:0px;">
+                        <img id="app-icon" src="./img/top_icon_02.png" style="position:absolute;top:0px;left:0px;">
+                        <img id="code-icon" src="./img/top_icon_03.png" style="position:absolute;top:0px;left:0px;">
+                        <img id="web-design-icon" src="./img/top_icon_04.png" style="position:absolute;top:0px;left:0px;">
+                        <img id="db-icon" src="./img/top_icon_05.png" style="position:absolute;top:0px;left:0px;">
+                        <img id="game-icon" src="./img/top_icon_06.png" style="position:absolute;top:0px;left:0px;">
+                        <script type="text/javascript">
+                            var iconList = new Array();
+                            var idList = ["web-icon","app-icon","code-icon","web-design-icon","db-icon","game-icon"];
+                            var pw = 0;
+                            var ph = 0;
+                            for (var i=0;i<idList.length;i++) {
+                                var icon = document.getElementById(idList[i]);
+                                if (3===i) {
+                                    pw = 0;
+                                    ph = 100;
+                                }
+                                
+                                var iconSetting = {
+                                    img : icon,
+                                    position : {
+                                        x:365 + 125 * pw,
+                                        y:60 + ph,
+                                    },
+                                    size : {
+                                        width : 50
+                                    },
+                                    boucny : new Bouncy(),
+                                    currentPosition :  0,
+                                    isComplete : false,
+                                };
+                                icon.width = iconSetting.size.width;
+                                iconList.push(iconSetting);
+                                pw++;
+                            }
+                            
+                            var logoSetting = {
+                                img : document.getElementById("logo"),
+                                position : {
+                                    x:475,
+                                    y:125,
+                                },
+                                size : {
+                                    width : 600
+                                },
+                                boucny : new Bouncy(),
+                                currentPosition :  0,
+                                isComplete : false,
+                            };
+                            
+                            var timerId = 0;
+                            var frame = 0;
+                            function frameUpdate() {
+                                for (var i in iconList) {
+                                    var setting = iconList[i];
+                                    if (false === setting.isComplete) {
+                                        transform(setting);
+                                    }
+                                }
+                                
+                                if (5 < frame && false === logoSetting.isComplete) {
+                                    transform(logoSetting);
+                                }
+                                if (15 < frame) {
+                                    clearTimeout(timerId);
+                                    return;
+                                }                                    
+                                timerId = setTimeout("frameUpdate()",100);
+                                frame++;
+                            }
+                            
+                            function transform(setting) {
+                                if (false !== setting.isComplete) {
+                                    return;
+                                }
+                                var img = setting.img;
+                                img.style.display = "block";
+                                var bouncy = setting.boucny;
+                                if (bouncy.isLimitSpeed()) {
+                                    bouncy.reset();
+                                    if (0.9 > bouncy.speed) {
+                                        setting.isComplete = true;
+                                        return;
+                                    }
+                                }
+                                var ds = setting.size.width * bouncy.speed * 0.075;
+                                var dp = ds * 0.5;
+                                img.width += ds;
+                                img.style.position = 'absolute'; 
+                                setting.currentPosition -= dp;
+                                img.style.top = setting.position.y + setting.currentPosition + "px";
+                                img.style.left = setting.position.x + setting.currentPosition + "px";
+                                bouncy.update();
+                            }
+                            frameUpdate();
+                        </script>                        
+                    </div>
+                </div>
+            </div>
+            <div class="table width100 menu-area">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width25 inline-center padding-top-xsmall">
+                    </div>
+                    <div class="cell width70 relative">
+                        <ul class="menu-area-list">
+                            <li id="works" class="menu-area-list-element font middle">
+                                <a class="none-decoration-link" href="./works.html">
+                                    WORKS/制作実績
+                                </a>
+                            </li>
+                            <li id="profile" class="menu-area-list-element font middle">
+                                <a class="none-decoration-link" href="./introduction.html">
+                                    PROFILE/概要
+                                </a>
+                            </li>
+                            <li id="contact-area" class="menu-area-list-element font middle">
+                                <a class="none-decoration-link" href="./contact.html">
+                                    CONTACT/お問い合わせ
+                                </a>
+                            </li>
+                        </ul>                    
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 margin-top-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 inline-center">
+                        <div class="header-text">
+                            INFORMATION
+                        </div>                                            
+                        <div class="font middle">
+                            お知らせ
+                        </div>                                  
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="notice-area" class="table width100 margin-top-small padding-bottom-large">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width65 inline-left-top">
+                        <div>
+                            <div class="table width100 ">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95">
+                                        <ul id="notice-list">
+                                        </ul>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sns-notice-area"class="cell width30 inline-center-top">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 round-area sns-area">
+                                        <div>
+                                            <div class="table width100 margin-top-small margin-bottom-small">
+                                                <div class="row">
+                                                    <div class="cell width2-5"></div>
+                                                    <div class="cell width95 twitter-header-area padding-top-small padding-bottom-small">
+                                                        <div>
+                                                            <a href="https://twitter.com/UCreates">
+                                                                <span class="twitter-header-text font header6">
+                                                                    U-CREATES公式Twitterアカウント
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width2-5"></div>
+                                                </div>
+                                            </div>
+                                            <div class="table width100 margin-top-small margin-bottom-small">
+                                                <div class="row">
+                                                    <div class="cell width2-5"></div>
+                                                    <div class="cell width95 facebook-header-area padding-top-small padding-bottom-small">
+                                                        <div>
+                                                            <a href="https://www.facebook.com/U-Creates-1718669885030615/?ref=hl">
+                                                                <span class="facebook-header-text font header6">
+                                                                    U-CREATES公式Facebookアカウント
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width2-5"></div>
+                                                </div>
+                                            </div>
+                                            <div class="table width100 margin-top-small margin-bottom-small">
+                                                <div class="row">
+                                                    <div class="cell width2-5"></div>
+                                                    <div class="cell width95 padding-top-small padding-bottom-small font middle inline-left">
+                                                        U-CREATESからのお知らせ、ホームページの更新情報をお届けしています。
+                                                    </div>
+                                                    <div class="cell width2-5"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 margin-top-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 inline-center">
+                        <div class="header-text">
+                            SERVICE
+                        </div>                                            
+                        <div class="font middle">
+                            サービス概要
+                        </div>                                  
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="service-area" class="table width100 margin-top-small margin-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 inline-left-top">
+                        <div>
+                            <span class="header-text font header6">HTML・CSS・JSコーディング</span>
+                        </div>
+                        <div>
+                            <img src="./img/service_html_css_js.png" width=100%>
+                        </div>
+                        <div class="font middle">
+                            PC、スマートフォン用のHTML・CSS・JSコーディングを行っております。PC/スマートフォンを主とした、表現幅の広い、HTML5、CSS3、Javascriptを利用したコーディングが得意です。
+                        </div>                            
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 inline-left-top">
+                        <div>
+                            <span class="header-text font header6">Webアプリ開発</span>
+                        </div>
+                        <div>
+                            <img src="./img/service_web_app.png" width=100%>
+                        </div>
+                        <div class="font middle">
+                            PHP、C#、KVS、DBを用いたWebアプリケーション開発を行っております。メールフォーム開発といったシンプルなものから、フレームワークを利用したものまで設計、改修、改良など幅広く対応しております。
+                        </div>                            
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 inline-left-top">
+                        <div>
+                            <span class="header-text font header6">スマートフォンアプリ開発</span>
+                        </div>
+                        <div>
+                            <img src="./img/service_sp_app.png" width=100%>
+                        </div>
+                        <div class="font middle">
+                            C++、C#、Objective-C、Swift、Javaを用いたスマートフォンアプリ開発を行っております。実績としては主にゲームが多く、Unityやcocos2d-xといったフレームワークに対しても幅広く対応しております。
+                        </div>                            
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 inline-center font header6 padding-top-middle padding-bottom-middle">
+                        Copyright 2015 U-CREATES. ALL Rrights Reserved.
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

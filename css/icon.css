@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+span.topix-header-icon-small {
+    padding-left:1%;
+    background-color:#80C31D;
+}
+
+span.topix-header-icon-small:after {
+    content: "";
+    padding-left:1%;
+    background-color:white;
+}
+
+span.topix-header-icon-middle {
+    padding-left:4%;
+    background-color:#EA5080;
+}
+
+span.topix-header-icon-middle:after {
+    content: "";
+}
+
+span.input-form-header-icon-small {
+    padding-left:2%;
+    background-color:#ff0000;
+}
+
+span.input-form-header-icon-small:after {
+    content: "";
+    padding-left:2%;
+    background-color:#ffffff;
+}

@@ -1,0 +1,361 @@
+@charset "UTF-8";
+/*default layout*/
+*{
+    padding:0;
+    margin:0;
+    font-style:normal;
+    font-weight:normal;
+    font-size:100%;
+}
+
+/*fixed layout*/
+body {
+    width:1024px;
+    margin:0 auto;
+    overflow:scroll;
+    -webkit-overflow-scrolling:touch;
+}
+
+/*table*/
+div.table {
+    display:table;
+}
+
+div.row {
+    display:table-row;
+}
+
+/*position*/
+div.relative {
+    position:relative;
+}
+
+/*indent*/
+.indent-left {
+  text-align:left;
+  padding-left:10px;
+}
+
+.indent-right {
+  text-align:right;
+  padding-right:10px;
+}
+
+.indent-left-margin {
+  text-align:left;
+  margin-left:10px;
+}
+
+.indent-right-margin {
+  text-align:left;
+  margin-right:10px;
+}
+
+/*cell*/
+div.cell {
+    display:table-cell;
+}
+
+/*align*/
+div.inline-center-top {
+    text-align:center;
+    vertical-align:top;
+}
+
+div.inline-center {
+    text-align:center;
+    vertical-align:middle;
+}
+
+div.inline-center-bottom {
+    text-align:center;
+    vertical-align:bottom;
+}
+
+div.inline-left-top {
+    text-align:left;
+    vertical-align:top;
+}
+
+div.inline-left {
+    text-align:left;
+    vertical-align:middle;
+}
+
+div.inline-left-bottom {
+    text-align:left;
+    vertical-align:bottom;
+}
+
+div.inline-right-top {
+    text-align:right;
+    vertical-align:top;
+}
+
+div.inline-right {
+    text-align:right;
+    vertical-align:middle;
+}
+
+div.inline-right-bottom {
+    text-align:right;
+    vertical-align:bottom;
+}
+
+/*width*/
+div.width05
+{
+  width:0.5%;
+}
+
+div.width08
+{
+  width:0.5%;
+}
+
+div.width1{
+  width:1%;
+}
+
+div.width2{
+  width:2%;
+}
+
+div.width2-5{
+  width:2.5%;
+}
+
+div.width3{
+  width:3%;
+}
+
+div.width4{
+  width:4%;
+}
+
+div.width5{
+  width:5%;
+}
+
+div.width7{
+  width:7%;
+}
+
+div.width10{
+  width:10%;
+}
+
+div.width12-5 {
+  width:12.5%;
+}
+
+div.width15 {
+  width:15%;
+}
+
+div.width20{
+  width:20%;
+}
+
+div.width25 {
+  width:25%;
+}
+
+div.width30 {
+  width:30%;
+}
+
+div.width35 {
+  width:35%;
+}
+
+div.width40 {
+  width:40%;
+}
+
+div.width45 {
+  width:45%;
+}
+
+div.width47-5 {
+  width:47.5%;
+}
+
+div.width49 {
+  width:49%;
+}
+
+div.width50 {
+  width:50%;
+}
+
+div.width55 {
+  width:55%;
+}
+
+div.width60 {
+  width:60%;
+}
+
+div.width65 {
+  width:65%;
+}
+
+div.width70 {
+  width:70%;
+}
+
+div.width75 {
+  width:75%;
+}
+
+div.width80
+{
+  width:80%;
+}
+
+div.width85
+{
+  width:85%;
+}
+
+div.width90
+{
+  width:90%;
+}
+
+div.width95
+{
+  width:95%;
+}
+
+div.width100{
+  width:100%;
+}
+
+div.round-area {
+    border-radius:5px;
+}
+
+div.round-top-area {
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+
+div.round-top-left-area {
+    border-top-left-radius:5px;
+}
+
+div.round-top-right-area {
+    border-top-right-radius:5px;
+}
+
+div.round-bottom-area {
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+
+div.round-left-area {
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+}
+
+div.round-right-area {
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+}
+
+div.round-bottom-left-area {
+    border-bottom-left-radius:5px;
+}
+
+div.round-bottom-right-area {
+    border-bottom-right-radius:5px;
+}
+
+div.space5 {
+  margin:5%;
+}
+
+div.cell.margin-small {
+    width:2.5%;
+}
+
+.padding-top-xsmall {
+    padding-top:2px;
+}
+
+.padding-top-small {
+    padding-top:5px;
+}
+
+.padding-top-middle {
+    padding-top:10px;
+}
+
+.padding-top-large {
+    padding-top:15px;
+}
+
+*.padding-bottom-xsmall {
+    padding-bottom:2px;
+}
+
+*.padding-bottom-small {
+    padding-bottom:5px;
+}
+
+*.padding-bottom-middle {
+    padding-bottom:10px;
+}
+
+*.padding-bottom-large {
+    padding-bottom:15px;
+}
+
+.margin-top-xsmall {
+  margin-top:1.5%;
+}
+
+.margin-top-small {
+  margin-top:2%;
+}
+
+.margin-bottom-small {
+  margin-bottom:2%;
+}
+
+.margin-top-middle {
+  margin-top:5%;
+}
+
+.margin-top-large {
+  margin-top:10%;
+}
+
+.margin-bottom-middle {
+  margin-bottom:5%;
+}
+
+div.text-shadow {
+  text-shadow: 0 0.2em rgba(0, 0, 0, 0.2);
+}
+
+/*border*/
+div.table.border {
+  border-collapse:collapse;
+}
+
+div.cell.border {
+  border:solid 0.1em green;
+}
+
+a.none-decoration-link {
+    text-decoration:none;
+    color: black;
+}
+
+div.cell.inline-middle-left {
+    text-align:left;
+    vertical-align:top;
+}

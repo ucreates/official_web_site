@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+*{
+    padding:0;
+    margin:0;
+    font-style: normal;
+    font-weight: normal;
+    font-size : 100%;
+}
+
+/*table*/
+div.table {
+    display:table;
+    width:100%;
+}
+
+div.row {
+    display:table-row;
+    width:100%;
+}
+
+/*position*/
+div.relative {
+    position:relative;
+}
+
+/*indent*/
+.indent-left {
+  text-align:left;
+  padding-left:2%;
+}
+
+.indent-right {
+  text-align:right;
+  padding-right:2%;
+}
+
+/*cell*/
+div.cell {
+    display:table-cell;
+}
+
+div.cell.inline-center {
+    text-align:center;
+    vertical-align:top;
+}
+
+div.cell.inline-right {
+    text-align:right;
+    vertical-align:top;
+}
+
+/*font*/
+.font.small {
+    font-size:0.5em;
+}
+
+.font.middle {
+    font-size:0.8em;
+}
+
+.font.large {
+    font-size:1.1em;
+}
+
+.font.header1 {
+    font-size:2em;font-weight:bold;
+}
+
+.font.header2 {
+    font-size:1.7em;font-weight:bold;
+}
+
+ul.list {
+    width:100%;
+    list-style:none;
+    margin:0px;
+    padding:0px;
+}
+
+/*width*/
+div.width05
+{
+  width:0.5%;
+}
+
+div.width10{
+  width:10%;
+}
+
+div.width20{
+  width:20%;
+}
+
+div.width125 {
+  width:12.5%;
+}
+
+div.width25 {
+  width:25%;
+}
+
+div.width30
+{
+  width:30%;
+}
+
+div.width40
+{
+  width:40%;
+}
+
+div.width50
+{
+  width:50%;
+}
+
+div.width60
+{
+  width:60%;
+}
+
+div.width70
+{
+  width:70%;
+}
+
+div.width80
+{
+  width:80%;
+}
+
+div.width90
+{
+  width:90%;
+}
+
+div.width100{
+  width:100%;
+}
+
+div.space5 {
+  margin:5%;
+}
+
+div.cell.margin-small {
+    width:2.5%;
+}
+
+.padding-top-xsmall {
+    padding-top:0.5%;
+}
+
+.padding-bottom-xsmall {
+    padding-bottom:0.5%;
+}
+
+.padding-top-small {
+    padding-top:1.5%;
+}
+
+.padding-bottom-small {
+    padding-bottom:1.5%;
+}
+
+.padding-top-middle {
+    padding-top:3%;
+}
+
+.margin-top-xsmall {
+  margin-top:1.5%;
+}
+
+.margin-top-small {
+  margin-top:2%;
+}
+
+.margin-bottom-small {
+  margin-bottom:2%;
+}
+
+.margin-top-middle {
+  margin-top:5%;
+}
+
+.margin-bottom-middle {
+  margin-bottom:5%;
+}
+
+div.text-shadow {
+  text-shadow: 0 0.2em rgba(0, 0, 0, 0.2);
+}
+
+/*border*/
+div.table.border {
+  border-collapse:collapse;
+}
+
+div.cell.border {
+  border:solid 0.1em #ffcd70;
+}
+
+a.none-decoration-link {
+    text-decoration:none;
+    color: black;
+}
